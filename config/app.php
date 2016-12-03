@@ -162,6 +162,11 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        /**
+         * passport
+         */
+        Laravel\Passport\PassportServiceProvider::class,
+
         /*
          * debugger
          */
