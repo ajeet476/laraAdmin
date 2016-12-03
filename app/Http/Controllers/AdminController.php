@@ -74,7 +74,8 @@ class AdminController extends Controller
                 'Authorization' => 'Bearer '.$accessToken,
             ],
         ]);
-        return json_decode((string) $response->getBody(), true);
+        $member= json_decode((string) $response->getBody(), true);
+        return response()->json($member);
     }
 
     /**
