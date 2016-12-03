@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/adminLogin', 'AdminController@login');
+Route::get('/callback', 'AdminController@callback');
+Route::get('/myInfo', 'AdminController@Info');
+
+//vSzSAUk4TLvPX2FPDeem8bSrHdINhrqqyXtErFar

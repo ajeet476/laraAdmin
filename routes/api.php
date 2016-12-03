@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::get('/roles', function () {
+    return array('you are not admin', 'you may be admin');
+})->middleware('auth:api');
