@@ -16,11 +16,11 @@ class AdminController extends Controller
         $this->middleware('auth')->only('info');
         $this->http = new HttpClient;
         $this->client_id = env('CLIENT_ID',3);
-        $this->client_secret = env('CLIENT_SECRET','vSzSAUk4TLvPX2FPDeem8bSrHdINhrqqyXtErFar');
-        $this->redirect_uri = env('REDIRECT_URI','http://localhost:5003/callback');
-        $this->apiTokenApiUrl = env('MEMBER_TOKEN_API_URL','http://localhost:5003/oauth/token');
-        $this->memberInfoApiUrl = env('MEMBER_INFO_API_URL','http://localhost:5003/api/user');
-        $this->passportLoginUrl = env('MEMBER_LOGIN_URL','http://localhost:5003/oauth/authorize');
+        $this->client_secret = env('CLIENT_SECRET');
+        $this->redirect_uri = env('REDIRECT_URI');
+        $this->apiTokenApiUrl = env('MEMBER_TOKEN_API_URL');
+        $this->memberInfoApiUrl = env('MEMBER_INFO_API_URL');
+        $this->passportLoginUrl = env('MEMBER_LOGIN_URL');
     }
 
     /**
