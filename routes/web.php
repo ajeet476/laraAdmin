@@ -17,10 +17,25 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//outside register not allowed
+//Route::get('/register',function (){
+//   abort(404);
+//});
+
 Route::get('/home', 'HomeController@index');
 
 Route::get('/adminLogin', 'AdminController@login');
 Route::get('/callback', 'AdminController@callback');
 Route::get('/myInfo', 'AdminController@Info');
+
+
+Route::get('/admin/user/list', 'Access\UsersController@index');
+
+Route::get('/admin/user/{user}','Access\UsersController@detail');
+
+Route::get('/admin/user/register', 'Access\UserController@showRegistrationForm');
+
+Route::post('/admin/user/register', 'Access\UserController@register');
+
 
 //vSzSAUk4TLvPX2FPDeem8bSrHdINhrqqyXtErFar
