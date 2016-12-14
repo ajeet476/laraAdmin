@@ -86,7 +86,7 @@ class SetUpAdmin extends Command
         $admin->attachPermission($createPost);
         // equivalent to $admin->perms()->sync(array($createPost->id));
 
-        $owner->attachPermissions(array($createPost, $editUser));
+        //$owner->attachPermissions(array($createPost, $editUser));
         // equivalent to $owner->perms()->sync(array($createPost->id, $editUser->id));
     }
 }
