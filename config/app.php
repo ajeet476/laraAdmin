@@ -166,11 +166,6 @@ return [
          * passport
          */
         Laravel\Passport\PassportServiceProvider::class,
-        /**
-         * QuickAdmin
-         */
-        Laraveldaily\Quickadmin\QuickadminServiceProvider::class,
-
 
         /*
          * debugger
