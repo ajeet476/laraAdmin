@@ -16,7 +16,7 @@ class UsersController extends Controller
      */
     public function __construct()
     {
-
+        $this->middleware('permission:manage-admins')->except(['index']);
     }
     public function index(){
         $users = DB::table('users')->paginate(15);
