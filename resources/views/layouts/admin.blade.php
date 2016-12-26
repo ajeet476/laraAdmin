@@ -11,7 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <!--link href="/css/app.css" rel="stylesheet">
+    <!-- Material Styles -->
+    <link rel="stylesheet" href="{{ asset('css/materialize.css') }}">
 
     <!-- Scripts -->
     <script>
@@ -47,5 +49,7 @@
 
 <!-- Scripts -->
 <script src="/js/app.js"></script>
+<!-- Material JavaScripts -->
+<script src="{{ asset('js/materialize.js') }}"></script>
 </body>
 </html>
