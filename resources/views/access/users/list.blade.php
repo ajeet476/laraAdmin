@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container">
         <div class="row">
             <table class="table">
                 <thead>
@@ -26,5 +25,4 @@
             </table>
             {{ $users->links() }}
         </div>
-    </div>
 @endsection

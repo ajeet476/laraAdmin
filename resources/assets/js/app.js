@@ -28,6 +28,11 @@ Vue.component(
     require('./components/passport/PersonalAccessTokens.vue')
 );
 
+Vue.component(
+    'admin-side-bar',
+    require('./components/admin/SideBar.vue')
+);
+
 const app = new Vue({
     el: '#app'
 });
