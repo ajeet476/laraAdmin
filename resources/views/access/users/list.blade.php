@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="striped" class="section">
-        <h2 class="header">Striped Table</h2>
+        <h3 class="header">Striped Table</h3>
 
             <table class="highlight responsive-table">
                 <thead>
@@ -16,7 +16,6 @@
                 <tbody>
             @foreach ($users as $user)
                 <tr>
-
                     <th scope="row"> <a href=" {{url('/admin/user', [$user->id])}}"> {{ $user->id }} </a></th>
                     <td> {{ $user->name }} </td>
                     <td> {{ $user->email }} </td>

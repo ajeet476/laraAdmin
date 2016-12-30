@@ -19,8 +19,21 @@ class UsersController extends Controller
         $this->middleware('permission:create-post')->except(['index']);
     }
     public function index(){
-        $users = DB::table('users')->paginate(15);
-        return view('access.users.list')->with(['users' => $users]);
+        return view('access.users.index');
+        //$users = DB::table('users')->paginate(15);
+        //return view('access.users.list')->with(['users' => $users]);
+    }
+    public function getData(){
+
+        $model = User::searchPaginateAndOrder();
+
+        $columns = User::$columns;
+
+        return response()
+            ->json([
+                'model' => $model,
+                'columns' => $columns
+            ]);
     }
     public function detail(User $user){
         return view('access.users.detail')->with(['user'=>$user]);

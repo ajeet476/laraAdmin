@@ -6,11 +6,12 @@ use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
+use App\Helper\DataViewer;
 
 
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable, EntrustUserTrait;
+    use HasApiTokens, Notifiable, EntrustUserTrait, DataViewer;
 
     /**
      * The attributes that are mass assignable.
@@ -27,6 +28,15 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'role_id','password', 'remember_token',
+    ];
+    /**
+     * the data that should be visible to Administrator
+     * @var array
+     */
+    public static $columns = [
+        'id', 'active',
+        'name', 'email',
+        'created_at', 'updated_at'
     ];
 }

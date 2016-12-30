@@ -38,6 +38,11 @@ Vue.component(
     require('./components/admin/Breadcrumbs.vue')
 );
 
+Vue.component(
+    'admin-data-viewer',
+    require('./components/admin/DataViewer.vue')
+);
+
 
 const app = new Vue({
     el: '#app'
