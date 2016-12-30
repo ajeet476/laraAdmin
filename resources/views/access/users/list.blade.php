@@ -1,8 +1,10 @@
 @extends('layouts.admin')
 
 @section('content')
-        <div class="row">
-            <table class="table">
+    <div id="striped" class="section">
+        <h2 class="header">Striped Table</h2>
+
+            <table class="highlight responsive-table">
                 <thead>
                 <tr>
                     <th>#</th>
@@ -24,5 +26,5 @@
                 </tbody>
             </table>
             {{ $users->links() }}
-        </div>
+    </div>
 @endsection

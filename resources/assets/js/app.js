@@ -33,6 +33,12 @@ Vue.component(
     require('./components/admin/SideBar.vue')
 );
 
+Vue.component(
+    'admin-breadcrumbs',
+    require('./components/admin/Breadcrumbs.vue')
+);
+
+
 const app = new Vue({
     el: '#app'
 });

@@ -9,20 +9,21 @@
         </div>
         <v-side-nav id="sideBar" class="side-nav fixed" style="transform: translateX(0%);">
             <ul id="side-nav" >
-                <li class=""><a href="Install">Install</a></li>
-                <li class=""><a href="Functional">Functional</a></li>
-                <li class=""><a href="Dialog">Dialog</a></li>
+                <li class=""><v-btn-link class="light-green dark" href="Install">Install</v-btn-link></li>
+                <li class=""><v-btn-link class="light-green dark" href="Functional">Functional</v-btn-link></li>
+                <li class=""><v-btn-link class="light-green dark" href="Dialog">Dialog</v-btn-link></li>
                 <li class="no-padding">
                     <ul data-collapsible="accordion" class="collapsible">
                         <li class="active">
                             <div class="black-text waves-effect waves-teal collapsible-header active">
+                                <i class="material-icons right">&#xE313;</i>
                                 Components
                             </div>
                             <div class=" collapsible-body" style="display: block;">
                                 <ul>
-                                    <li class=""><a href="Badge">Badge</a></li>
-                                    <li class="active"><a href="Pagination">Pagination</a></li>
-                                    <li class=""><a href="Tabs">Tabs</a></li>
+                                    <li class=""><v-btn-link href="Badge" class="light-green dark">Badge</v-btn-link></li>
+                                    <li class="active"><v-btn-link href="Pagination" class="light-green dark">Pagination</v-btn-link></li>
+                                    <li class=""><v-btn-link href="Tabs" class="light-green dark">Tabs</v-btn-link></li>
                                 </ul>
                             </div>
                         </li>

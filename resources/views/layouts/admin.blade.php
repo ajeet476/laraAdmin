@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
     <!-- Styles -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.css" rel="stylesheet">
@@ -92,8 +94,13 @@
         </div>
     </header>
     <main>
+        <admin-breadcrumbs></admin-breadcrumbs>
         <div class=" container">
-            @yield('content')
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    @yield('content')
+                </div>
+            </div>
         </div>
     </main>
 
@@ -107,6 +114,5 @@
 <!-- Scripts -->
 <script src="{{ elixir('js/app.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.js"></script>
-
 </body>
 </html>
